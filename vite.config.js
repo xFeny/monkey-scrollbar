@@ -1,0 +1,21 @@
+import { defineConfig } from "vite";
+import monkey from "vite-plugin-monkey";
+
+export default defineConfig({
+  plugins: [
+    monkey({
+      entry: "src/main.js",
+      userscript: {
+        author: "Feny",
+        license: "MIT",
+        version: "0.1.0",
+        name: "滚动条美化",
+        match: ["*://*/*"],
+        namespace: "npm/vite-plugin-monkey",
+        icon: "data:image/png;base64,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",
+        require: ["https://code.jquery.com/jquery-3.4.1.min.js"],
+        description: "Scroll Style 插件移植成油猴脚本，并且合并🌈彩虹滚动条🌈的CSS样式",
+      },
+    }),
+  ],
+});

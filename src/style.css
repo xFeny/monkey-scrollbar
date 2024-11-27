@@ -1,5 +1,5 @@
 :root {
-  scrollbar-width: none;
+  scrollbar-width: none !important;
 }
 
 body::-webkit-scrollbar,

@@ -8,7 +8,7 @@ export default defineConfig({
       userscript: {
         author: "Feny",
         license: "MIT",
-        version: "0.1.0",
+        version: "1.3.2",
         name: "滚动条美化",
         match: ["*://*/*"],
         "run-at": "document-body",

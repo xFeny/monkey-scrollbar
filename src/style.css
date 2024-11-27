@@ -17,13 +17,13 @@ body::-webkit-scrollbar,
 
 ::-webkit-scrollbar-thumb {
   border-radius: 5px !important;
-  -webkit-box-shadow: inset 0 0 10px rgba(255, 255, 255, 1) !important;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 1) !important;
   background: linear-gradient(to bottom, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
   border-radius: 5px !important;
-  -webkit-box-shadow: inset 0 0 10px rgba(255, 255, 255, 1) !important;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 1) !important;
   background: linear-gradient(to right, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
 }
 

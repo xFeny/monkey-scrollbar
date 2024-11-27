@@ -1,3 +1,24 @@
+$barWidth: 7px;
+$vertical-background: linear-gradient(to bottom, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
+$horizontal-background: linear-gradient(to right, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
+
+@mixin radius() {
+  border-radius: 5px !important;
+}
+
+@mixin scrollbar($bg) {
+  background: $bg;
+  @include radius();
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 1) !important;
+}
+
+@mixin box() {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
 :root {
   scrollbar-width: none !important;
 }
@@ -12,52 +33,38 @@ body::-webkit-scrollbar,
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-  max-width: 14px;
-  max-height: 14px;
+  width: $barWidth;
+  height: $barWidth;
   display: static !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 5px !important;
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 1) !important;
-  background: linear-gradient(to bottom, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
+  @include scrollbar($vertical-background);
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-  border-radius: 5px !important;
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 1) !important;
-  background: linear-gradient(to right, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
+  @include scrollbar($horizontal-background);
 }
 
 /* 自定义滚动条 */
 .wsx_scroll {
-  margin: 0;
-  padding: 0;
+  @include box();
   display: none;
   position: fixed;
-  user-select: none;
   z-index: 999999999;
   transition: opacity 200ms linear;
 }
 
 .wsx_scroll_bar {
-  margin: 0;
-  padding: 0;
-  user-select: none;
+  @include box();
   position: relative;
-  pointer-events: none;
 }
 
 .wsx_fade {
-  margin: 0;
-  padding: 0;
+  @include box();
   display: block;
   position: fixed;
-  user-select: none;
   z-index: 9999999999;
-  pointer-events: none;
 }
 
 .wsx_vertical_scroll {
@@ -68,11 +75,11 @@ body::-webkit-scrollbar,
 
 .wsx_vertical_scroll_bar {
   left: 19px;
-  width: 7px;
-  height: 100%;
   opacity: 0.6;
-  border-radius: 5px;
-  background: linear-gradient(to bottom, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
+  height: 100%;
+  width: $barWidth;
+  @include radius();
+  background: $vertical-background;
 }
 
 .wsx_vertical_fade {
@@ -91,10 +98,10 @@ body::-webkit-scrollbar,
 .wsx_horizontal_scroll_bar {
   top: 20px;
   width: 100%;
-  height: 7px;
   opacity: 0.6;
-  border-radius: 5px;
-  background: linear-gradient(to right, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
+  height: $barWidth;
+  @include radius();
+  background: $horizontal-background;
 }
 
 .wsx_horizontal_fade {

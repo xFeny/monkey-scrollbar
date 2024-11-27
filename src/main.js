@@ -1,4 +1,4 @@
-import "./style.css";
+import "./style.scss";
 
 document.addEventListener("DOMContentLoaded", function () {
   const timeoutSec = 500;

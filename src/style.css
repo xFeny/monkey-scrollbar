@@ -8,8 +8,8 @@ body::-webkit-scrollbar,
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   max-width: 14px;
   max-height: 14px;
   display: static !important;
@@ -27,82 +27,73 @@ body::-webkit-scrollbar,
   background: linear-gradient(to right, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
 }
 
-.vertical-scroll {
-  top: 0;
-  right: 0;
+/* 自定义滚动条 */
+.wsx_scroll {
   margin: 0;
   padding: 0;
-  width: 30px;
   display: none;
   position: fixed;
   user-select: none;
-  z-index: 999999999999;
+  z-index: 999999999;
   transition: opacity 200ms linear;
 }
 
-.vertical-scroll-bar {
+.wsx_scroll_bar {
   margin: 0;
   padding: 0;
-  left: 19px;
-  width: 8px;
-  height: 100%;
   user-select: none;
   position: relative;
-  border-radius: 5px;
   pointer-events: none;
+}
+
+.wsx_fade {
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  user-select: none;
+  z-index: 9999999999;
+  pointer-events: none;
+}
+
+.wsx_vertical_scroll {
+  top: 0;
+  right: 0;
+  width: 30px;
+}
+
+.wsx_vertical_scroll_bar {
+  left: 19px;
+  width: 7px;
+  height: 100%;
+  border-radius: 5px;
   background: linear-gradient(to bottom, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
 }
 
-.vertical-fade {
+.wsx_vertical_fade {
   top: 0;
   right: 0;
-  margin: 0;
-  padding: 0;
   width: 45px;
   height: 100%;
-  display: block;
-  position: fixed;
-  user-select: none;
-  pointer-events: none;
-  z-index: 9999999999999;
 }
 
-.horizontal-scroll {
+.wsx_horizontal_scroll {
   left: 0;
-  margin: 0;
-  padding: 0;
   bottom: 0;
   height: 30px;
-  display: none;
-  position: fixed;
-  user-select: none;
-  z-index: 999999999999;
-  transition: opacity 200ms linear;
 }
 
-.horizontal-scroll-bar {
+.wsx_horizontal_scroll_bar {
   top: 20px;
-  margin: 0;
-  padding: 0;
   width: 100%;
-  height: 8px;
-  user-select: none;
-  position: relative;
+  height: 7px;
   border-radius: 5px;
-  pointer-events: none;
   background: linear-gradient(to right, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
 }
 
-.horizontal-fade {
+.wsx_horizontal_fade {
   left: 0;
   bottom: 0;
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 30px;
-  display: block;
-  position: fixed;
-  user-select: none;
-  pointer-events: none;
-  z-index: 9999999999999;
 }

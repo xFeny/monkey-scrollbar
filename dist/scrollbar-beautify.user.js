@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         滚动条美化
 // @namespace    npm/vite-plugin-monkey
-// @version      0.1.0
+// @version      1.3.2
 // @author       Feny
 // @description  移植于Scroll Style插件，且使用🌈彩虹滚动条🌈脚本的CSS样式
 // @license      MIT

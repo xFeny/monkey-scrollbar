@@ -66,6 +66,7 @@ body::-webkit-scrollbar,
   left: 19px;
   width: 7px;
   height: 100%;
+  opacity: 0.6;
   border-radius: 5px;
   background: linear-gradient(to bottom, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
 }
@@ -87,6 +88,7 @@ body::-webkit-scrollbar,
   top: 20px;
   width: 100%;
   height: 7px;
+  opacity: 0.6;
   border-radius: 5px;
   background: linear-gradient(to right, #ff567f, #fbeb91, #2ec2ff, #8375ff) !important;
 }
